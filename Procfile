@@ -1,0 +1,1 @@
+worker: java -jar build/libs/me.egidio.You69-1.0-SNAPSHOT-all.jar
