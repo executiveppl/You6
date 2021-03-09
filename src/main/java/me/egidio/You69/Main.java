@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         DiscordApi Bot = new DiscordApiBuilder().setToken(Token.token).login().join();
-        Bot.updateActivity(ActivityType.PLAYING, "??help");
+        Bot.updateActivity(ActivityType.PLAYING, "?help");
 
         Bot.addListener(new PingPong());
 
