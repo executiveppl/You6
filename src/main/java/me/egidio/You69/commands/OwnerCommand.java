@@ -7,12 +7,9 @@ import org.javacord.api.listener.message.MessageCreateListener;
 public class OwnerCommand implements MessageCreateListener {
 
     @Override
-    public void onMessageCreate(MessageCreateEvent message) {
-
-        if (message.getMessageContent().equalsIgnoreCase(Main.Prefix + "owner")) {
-
-            message.getChannel().sendMessage("My owner is: @prodbyxgi");
-
+    public void onMessageCreate(MessageCreateEvent event) {
+        if (event.getMessageContent().equalsIgnoreCase(Main.Prefix + "owner")) {
+            event.getChannel().sendMessage("My owner is: @prodbyxgi");
         }
     }
 }
