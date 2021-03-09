@@ -8,7 +8,9 @@ public class OwnerCommand implements MessageCreateListener {
 
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
+
         if (event.getMessageContent().equalsIgnoreCase(Main.Prefix + "owner")) {
+            
             event.getChannel().sendMessage("My owner is: @prodbyxgi");
         }
     }
