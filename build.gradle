@@ -29,6 +29,6 @@ build.mustRunAfter test
 
 jar {
     manifest{
-        attributes 'Class-Path': '/libs/me.egidio.You69-1.0-SNAPSHOT.jar', 'Main-Class': 'com.discord.bots.Main'
+        attributes 'Class-Path': '/libs/me.egidio.You69-1.0-SNAPSHOT.jar', 'Main-Class': 'me.egidio.You69'
     }
 }
