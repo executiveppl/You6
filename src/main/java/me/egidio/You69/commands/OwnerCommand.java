@@ -11,7 +11,7 @@ public class OwnerCommand implements MessageCreateListener {
 
         if (event.getMessageContent().equalsIgnoreCase(Main.Prefix + "owner")) {
 
-            event.getChannel().sendMessage("My owner is: @prodbyxgi");
+            event.getChannel().sendMessage("My owner is: <@585805640278999040>");
         }
     }
 }
