@@ -13,10 +13,13 @@ public class OwnerCommand implements MessageCreateListener {
     public void onMessageCreate(MessageCreateEvent event) {
 
         if (event.getMessageContent().equalsIgnoreCase(Main.Prefix + "owner")) {
+            EmbedBuilder embed = new EmbedBuilder()
+                    .setAuthor("Egidio Capasso", "https://www.instagram.com/egi.dioo/", "https://cdn.discordapp.com/avatars/585805640278999040/7f9d0292992e7b2593a51a2155aac4b7.png?size=1024")
+                    .setDescription("This is my dad :D")
+                    .addInlineField("GitHub", "https://github.com/executiveppl/You6")
+                    .setColor(Color.GREEN);
 
-            EmbedBuilder embedOwner = new EmbedBuilder()
-                    .setAuthor("Egidio Capasso");
-
+            event.getChannel().sendMessage(embed);
         }
     }
 }
