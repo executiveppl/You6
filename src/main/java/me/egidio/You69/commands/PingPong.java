@@ -13,7 +13,7 @@ public class PingPong implements MessageCreateListener {
 
         if (message.getMessageContent().equalsIgnoreCase(Main.Prefix + "ping")) {
 
-            message.getChannel().sendMessage("Pong!");
+            message.getChannel().sendMessage(":ping_pong: Pong!");
         }
     }
 }
