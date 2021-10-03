@@ -19,6 +19,8 @@ public class Main {
         Bot.addListener(new PingPong());
         Bot.addListener(new OwnerCommand());
         Bot.addListener(new Help());
+        //Musica
+
 
         System.out.println("Bot is online!");
         System.out.println("You can invite the bot by using the following url: " + Bot.createBotInvite());
