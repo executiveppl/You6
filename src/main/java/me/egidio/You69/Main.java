@@ -4,6 +4,7 @@ import me.egidio.You69.commands.Help;
 import me.egidio.You69.commands.OwnerCommand;
 import me.egidio.You69.commands.PingPong;
 import me.egidio.You69.commands.music.audio.PlayerManager;
+import me.egidio.You69.commands.music.commands.LeaveCommand;
 import me.egidio.You69.secret.Token;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
@@ -23,7 +24,7 @@ public class Main {
         Bot.addListener(new OwnerCommand());
         Bot.addListener(new Help());
         //Musica
-
+        Bot.addListener(new LeaveCommand());
 
         System.out.println("Bot is online!");
         System.out.println("You can invite the bot by using the following url: " + Bot.createBotInvite());
