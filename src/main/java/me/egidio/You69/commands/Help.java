@@ -16,7 +16,7 @@ public class Help implements MessageCreateListener {
             EmbedBuilder embed = new EmbedBuilder()
                     .setAuthor("Comandi")
                     .setDescription("Tutti i comandi di questo bot")
-                    .addInlineField("?ping", "Rispondo :ping_pong: pong!")
+                    .addInlineField("?Ping", "Rispondo :ping_pong: pong!")
                     .addInlineField("?Owner", "Chi mi ha creato")
                     .setColor(Color.RED);
 
