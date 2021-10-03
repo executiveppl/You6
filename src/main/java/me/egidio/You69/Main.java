@@ -3,6 +3,7 @@ package me.egidio.You69;
 import me.egidio.You69.commands.Help;
 import me.egidio.You69.commands.OwnerCommand;
 import me.egidio.You69.commands.PingPong;
+import me.egidio.You69.commands.music.audio.PlayerManager;
 import me.egidio.You69.secret.Token;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
@@ -15,6 +16,8 @@ public class Main {
     public static void main(String[] args) {
         DiscordApi Bot = new DiscordApiBuilder().setToken(Token.token).login().join();
         Bot.updateActivity(ActivityType.PLAYING, "?help");
+
+        PlayerManager.init();
 
         Bot.addListener(new PingPong());
         Bot.addListener(new OwnerCommand());
