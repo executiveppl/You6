@@ -3,11 +3,6 @@ package me.egidio.You69;
 import me.egidio.You69.commands.Help;
 import me.egidio.You69.commands.OwnerCommand;
 import me.egidio.You69.commands.PingPong;
-import me.egidio.You69.commands.music.audio.PlayerManager;
-import me.egidio.You69.commands.music.commands.LeaveCommand;
-import me.egidio.You69.commands.music.commands.PlayCommand;
-import me.egidio.You69.commands.music.commands.SkipCommand;
-import me.egidio.You69.commands.music.commands.StopCommand;
 import me.egidio.You69.secret.Token;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
@@ -21,19 +16,13 @@ public class Main {
         DiscordApi Bot = new DiscordApiBuilder().setToken(Token.token).login().join();
         Bot.updateActivity(ActivityType.PLAYING, "?help");
 
-        PlayerManager.init();
 
         Bot.addListener(new PingPong());
         Bot.addListener(new OwnerCommand());
         Bot.addListener(new Help());
-        //Musica
-        Bot.addListener(new LeaveCommand());
-        Bot.addListener(new PlayCommand());
-        Bot.addListener(new SkipCommand());
-        Bot.addListener(new StopCommand());
 
         System.out.println("Bot is online!");
-        System.out.println("You can invite the bot by using the following url: " + Bot.createBotInvite());
+        System.out.println("You can invite the bot by using the following url: " + Bot.createBotInvite() + Bot.getLatestGatewayLatency());
     }
 
 }
