@@ -22,7 +22,7 @@ public class Main {
         Bot.addListener(new Help());
 
         System.out.println("Bot is online!");
-        System.out.println("You can invite the bot by using the following url: " + Bot.createBotInvite() + Bot.getLatestGatewayLatency());
+        System.out.println("You can invite the bot by using the following url: " + Bot.createBotInvite() + "                 " + Bot.getLatestGatewayLatency());
     }
 
 }
