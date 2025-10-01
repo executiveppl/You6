@@ -1,2 +1,2 @@
 # You6
-# Discord bot!
+Discord bot!
